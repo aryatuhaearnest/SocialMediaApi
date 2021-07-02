@@ -8,4 +8,6 @@ import com.earnest.socialmedia.model.User;
 
 @Repository
 public interface LocationRepository extends CrudRepository<Location, Integer> {
+	
+	
 }

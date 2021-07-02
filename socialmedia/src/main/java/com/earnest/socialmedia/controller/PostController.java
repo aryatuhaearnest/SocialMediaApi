@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.earnest.socialmedia.model.Location;
 import com.earnest.socialmedia.model.Post;
+import com.earnest.socialmedia.model.User;
 import com.earnest.socialmedia.service.PostService;
 
 @RestController
@@ -54,5 +55,11 @@ public class PostController {
 	@PutMapping("/posts")
 	public Post updatePost(@RequestBody Post post) {
 		return postService.updatePost(post) ;
+	}
+	
+	
+	@GetMapping("/users/posts")
+	public List<Post> getPostByUser(@RequestBody User user) {
+		return postService.getPostByUser(user) ;
 	}
 }

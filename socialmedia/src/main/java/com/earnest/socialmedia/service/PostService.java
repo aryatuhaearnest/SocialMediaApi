@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.earnest.socialmedia.model.Location;
 import com.earnest.socialmedia.model.Post;
+import com.earnest.socialmedia.model.User;
 import com.earnest.socialmedia.repository.PostRepository;
 
 @Service
@@ -75,4 +76,11 @@ private List<Post> posts = new ArrayList();
 		}
 		return postToUpdate;
 	}
+	
+	
+	public List<Post> getPostByUser(User user) {
+		return postRepository.findPostByUser(user);
+	}
+	
+	
 }
